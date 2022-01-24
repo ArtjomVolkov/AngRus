@@ -1,10 +1,10 @@
 from module1 import*
 rus=[]
 ang=[]
-ang=lug("Ang.txt",ang)
-rus=lug("Rus.txt",rus)
-print(ang)
-print(rus)
+#ang=lug("Ang.txt",ang)
+#rus=lug("Rus.txt",rus)
+#print(ang)
+#print(rus)
 print("Добро пожаловать в Русско-Эстониский словарь \nTere tulemast vene-eesti sõnastikku!")
 while True:
 	while 1:
@@ -34,7 +34,7 @@ while True:
 			#	ang=correction(input("Sõna -> "),ang)
 			#	failisse(ang,"Ang.txt")
 		elif menu.upper()=="K":
-			print()
+			test(rus,ang)
 		elif menu.upper()=="L":
 			print("Удачи! \nHead aega!")
 			exit(0)

@@ -95,3 +95,35 @@ def heli(text:str,keel:str):
 	obj=gTTS(text=text,lang=keel,slow=False).save("heli.mp3")
 	os.system("heli.mp3")
 	playsound("heli.mp3")
+
+import random
+def test(l1:list,l2:list):
+	"""
+	"""
+	print(1)
+	res=0
+	l3=[]
+	l3.extend(l1)
+	l3.extend(l2)
+	random.shuffle(l3)
+	print("Random list ",l3)
+	for i in range(len(l1)):
+		print("l1 ",l1)
+		print("l2 ",l2)
+		h=input(f"Переведи данное слово - '{l3[i]}': ")
+		if h in l1 or h in l2:
+			if l3[i] in l1:
+				if l1.index(l3[i])==l2.index(h):
+					res+=1
+					print('правильно!')
+					print()
+				elif l3[i] in l2:
+					if l2.index(l3[i])==l1.index(h):
+						res+=1
+						print('правильно!')
+						print()
+		else:
+			print("Неправильно!")
+			print()
+	r=(res/len(l1))*100
+	print(f"Ваш результат: {resultPer}%")
